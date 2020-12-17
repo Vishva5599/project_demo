@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Project 1</title>
+
+	<link rel="stylesheet" type="text/css" href="jquery-ui/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="jquery-ui/jquery-ui.structure.css">
+	<link rel="stylesheet" type="text/css" href="jquery-ui/jquery-ui.theme.css">
+
+	<style>
+
+		* {
+  			box-sizing: border-box;
+  			font-family: Arial, Helvetica, sans-serif;
+		}
+
+		body 
+			{
+ 				 margin: 0;
+  				font-family: Arial, Helvetica, sans-serif;
+			 }
+
+		.navi
+		{
+			overflow: hidden;
+			background-color: #3c1321;
+			padding-inline-start: 240px;
+
+		}
+
+		.navi a{
+
+			float: left;
+			display: block;
+			color: white;
+			padding: 50px;
+		}
+		 .navi a:hover{
+
+		 	
+		 	color: brown; 
+		 	cursor: pointer;
+
+		 }
+
+		 #brew{
+		 	font-family: "open sans";
+		 	font-size: 25px;
+		 	font-weight: bold;
+
+		 }
+
+		 .sidenav{
+		 	height: 580px;
+		 	width: 350px;
+		 	top: 0;
+		 	right: 0;
+		 	float: right;
+		 	overflow-x: hidden;
+		 }
+
+		 #heading{
+		 	text-align: center;
+		 	font-size: 32px;
+		 	font-family:"open sans" ;
+		 	font-weight:bold ;
+		 	line-height: 1.2;
+		 	text-align: center;
+		 	padding-left: 303px;
+    		padding-top: 54px;
+		 }
+
+		 #para{
+		 	text-align: center;
+		 	color: #808080;
+		 	font-family: "open sans";
+		 	font-size: 18px;
+		 	font-weight: 300;
+		 	line-height: 1.8;
+		 	padding-inline-end: 300px;
+    		padding-inline-start: 294px;
+    		padding-top: 25px;
+    		padding-bottom: 75px;
+
+		 }
+
+		 .container {
+  						position: relative;
+  						text-align: center;
+  						color: white;
+					}
+
+		.total {
+  						position: relative;
+  						color: white;
+  						
+					}
+		.trade {
+  						position: relative;
+  						padding-top: 50px;
+  						
+					}
+
+		 .fair{
+		 	text-align: center;
+		 	color: white;
+		 	font-weight: bold;
+		 	font-size: 64px;
+		 	top: 50%;
+		 	left: 50%;
+		 	letter-spacing: 5px;
+		 	position: absolute;
+  			transform: translate(-50%, -50%);
+		 }
+
+		 .tasty{
+		 	text-align: center;
+		 	color: white;
+		 	font-weight: bold;
+		 	font-size: 64px;
+		 	top: 50%;
+		 	left: 40%;
+		 	letter-spacing: 5px;
+		 	position: absolute;
+  			transform: translate(-18%, -50%);
+		 }
+
+		 .morn{
+		 	color: white;
+		 	font-size:20px ;
+		 	font-family:"open sans" ;
+		 	font-weight:600 ;
+		 	letter-spacing: 4px;
+			position: absolute;
+		 	text-align: center;
+		 	transform: translate(194px, -89px);
+		 	
+
+		 }
+
+		 .btn{
+			background-color: transparent;
+		 	color: white;
+  			font-size: 18px;
+  			padding: 16px 32px;
+  			margin: 4px 2px;
+  			transition : 0.3s;
+  			cursor: pointer;
+  			border: 2px solid white;
+  			border-color: white;
+			position: absolute;
+  			 top: 50%;
+  			 left: 50%;
+  			 transform: translate(-50%, 84%);
+ 			 -ms-transform: translate(-50%, -50%);
+		 }
+
+		 .btn:hover {
+  					border-color: gray;
+  					color: gray;
+  				}
+
+  		#coff{
+  			color: brown;
+  			text-align: center;
+  			font-size: 20px;
+  			font-weight: 600;
+  			font-family: "open sans";
+  			padding-top: 50px;
+
+  		}
+
+  		#the{
+  			text-align: center;
+  			font-size: 42px;
+  			font-weight: 600;
+  			font-family: "open sans";
+
+  		}
+
+  		#row{
+  			display: flex;
+
+  		}
+
+  		#column{
+  			
+  			float: left;
+  			width: 32%;
+  			margin: 25px;
+  			cursor: pointer;
+  		}
+
+  		#column:hover{
+  			opacity: 0.8;
+  		}
+
+  		#one{
+			font-size:20px; 
+  			font-weight:600;
+  			font-family:"open sans";
+  			text-align:left ;
+  			line-height: 1.5;
+  			padding-left: 58px;
+
+  		}
+
+  		#two{
+  			font-size:14px; 
+  			font-weight:400;
+  			font-family:"open sans";
+  			text-align:left ;
+  			line-height: 1.6;
+  			padding-inline-start: 60px;
+    		padding-inline-end: 70px;
+    		color: #808080;
+
+  			
+  		}
+
+  		.navbar {
+				  overflow: hidden;
+				  background-color: #3c1321;
+				  
+				  bottom: 0;
+				  width: 100%;
+				}
+
+		.navbar a {
+				  float: left;
+				  display: block;
+				  color: white;
+				  text-align: center;
+				  padding: 50px;
+				  font-size: 17px;
+				}
+
+		.navbar a:hover {
+						  
+						  color: brown;
+						}
+		 #craft{
+		 	float: right;
+		 	color:gray;
+		 	padding-right: 95px;
+    		padding-top: 35px;
+		 }
+
+		 
+	</style>
+
+
+</head>
+<body>
+	
+		<div class="navi">
+			<a href="#">HOME</a>
+			<a href="#">MENU</a>
+			<a href="#"><span id="brew"><i>Coffee</i></span> <br>BREWING CO.</br></a>
+			<a href="#">BEANS</a>
+			<a href="#">CONTACT</a>
+		</div>
+	
+	
+	<div>
+
+		
+			<div class="total">
+				<img src="https://img.pagecloud.com/RLQp3OYPKClHesetxiloW_koYUs=/4200x0/filters:no_upscale()/luxe-3870/images/image-a3cff.jpeg" width="999px" height="500px">
+				<div class="morn">
+					<p>MORNING COFFEES     |     AFTERNOON DRINKS</p>
+				</div>
+		
+			
+			<div id="clubes" class="sidenav">
+
+			<h3>Roasted with care</h3>
+			<p>I’m a text box. Double click me to edit the text or to change the way I look. You can change the font, size, color, and so much more. For advanced styling options, click on “more” located on the right hand side of the text editing menu.Click once to move me or to bring up the resize handles and Squeegee Tool.</p>
+
+			<h3>Machiato / Cortado</h3>
+			<p>I’m a text box. Double click me to edit the text or to change the way I look. (Monday)</p>
+
+			<h3>Cappuccino / Flat White</h3>
+			<p>I’m a text box. Double click me to edit the text or to change the way I look. (Monday).</p>
+
+			<h3>Espresso / Americano</h3>
+			<p>I’m a text box. Double click me to edit the text or to change the way I look. (Monday)</p>
+
+			<h3>Organic tea</h3>
+			<p>I’m a text box. Double click me to edit the text or to change the way I look. (Monday)</p>
+			</div>
+
+	</div>
+
+	<div>
+			<h1 id="heading">Roasted with care</h1>
+			<p id="para">I’m a text box. Double click me to edit the text or to change the way I look. You can change the font, size, color, and so much more. For advanced styling options, click on “more” located on the right hand side of the text editing menu.Click once to move me or to bring up the resize handles and Squeegee Tool.</p>
+	</div>
+
+	<div class="container">
+		<img src="https://img.pagecloud.com/ZAc-HwIi5QD-8CBRb_Z57zXfhAQ=/4200x0/filters:no_upscale()/luxe-3870/images/image-s0165.jpeg" width="100%" height="500px">
+		<div class="fair">FAIR TRADE</div>
+	</div>
+
+	<div class="trade">
+		<img src="https://img.pagecloud.com/BWNE0olPPSbfcOZxtm_WhXjQPQk=/4200x0/filters:no_upscale()/luxe-3870/images/image-va492.jpeg" width="1348px" height="500px">
+		<div class="tasty">TASTY MENU
+			<button class="btn">See Full Menu
+		</div>
+	</div>
+
+	<div>
+
+		<h4 id="coff">Our Coffee</h4>
+		<p id="the">The way you want it</p>
+
+		<div id="row">
+			<div id="column">
+				<img src="https://img.pagecloud.com/yweSZHq5n4JCvpYCfOw0Tj8EBeQ=/156x104:4427x3142/660x0/filters:no_upscale()/luxe-3870/images/image-v51de.jpeg" width="400px" height="400px">
+				<div>
+					<h2 id="one">Cozy Coffeeshop</h2>
+					<p id="two">I’m a text box. Double click me to edit the text or to change the way I look. You can change the font, size, color, and more.</p>
+				</div>
+			</div>
+
+			<div id="column">
+				<img src="https://img.pagecloud.com/MyBgxkSA09pvUD-tH-YM-JCh19g=/816x0/filters:no_upscale()/luxe-3870/images/image-ke894.jpeg" width="400px" height="400px">
+				<div>
+					<h2 id="one">Coffee on the go</h2>
+					<p id="two">I’m a text box. Double click me to edit the text or to change the way I look. You can change the font, size, color, and more.</p>
+				</div>
+			</div>
+
+			<div id="column">
+				<img src="https://img.pagecloud.com/lLY6z2ur6SzcLw0uRnIfmK2KMpk=/0x536:2640x2416/660x0/filters:no_upscale()/luxe-3870/images/image-r2682.jpeg" width="400px" height="400px">
+				<div>
+					<h2 id="one">Take it home with you</h2>
+					<p id="two">I’m a text box. Double click me to edit the text or to change the way I look. You can change the font, size, color, and more.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="navbar">
+			<a href="#">HOME</a>
+			<a href="#">MENU</a>
+			<a href="#">BEANS</a>
+			<a href="#">CONTACT</a>
+			<div>
+				<p id="craft">Crafted loving with <span style="cursor: pointer;">Pagecloud</span></p>
+			</div>
+		</div>
+
+	</div>
+	
+
+</body>
+
+<script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+  
+  <script src="jquery-ui/jquery-ui.js" type="text/javascript"></script>
+
+  <script type="text/javascript">
+  	
+  	$(document).ready(function(){
+
+  		$("#clubes").accordion({
+
+  			collapsible:true,
+  			event:"mouseover",
+  			heightStyle:true,
+  			animate:1000,
+  			
+
+  		});
+  	})
+  </script>
+
+</html>
